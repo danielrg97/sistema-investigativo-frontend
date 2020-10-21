@@ -1,0 +1,131 @@
+.MainMenuContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    overflow: hidden;
+    display: flex;
+}
+a{ 
+    color:lightgray !important; 
+}
+a:hover { 
+    color: white!important; 
+}
+i{
+    margin: 10px !important;
+}
+/*Menu lateral*/
+.MainMenuContainer .MainMenuBodyLateralMenu{
+    background-color: #333333;;
+    width: 300px;
+    height: 100vh;
+}
+.MainMenuContainer .MainMenuBodyLateralMenu h1{
+    color: white;
+    font-size: 17pt;
+    width: 160px;
+    margin: 20px auto;
+}
+.MainMenuContainer .MainMenuBodyLateralMenu .WelcomeMessage{
+    width: 240px;
+    margin: 20px auto;
+    display: flex;
+}
+.mainOptions{
+    margin: auto;
+}
+.mainOptions ul{
+    list-style-type: none;
+    left: -28px;
+}
+.mainOptions ul li{
+    padding: 1em 0.5em;
+}
+.profileCircle{
+    width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: #c850c0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin:0px auto;
+    padding:3%
+}
+.initials{
+    color: white;
+    font-size: 17pt;
+}
+.profileCircle2{
+    width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #c850c0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin:0px auto;
+    padding:3%;
+}
+.initials2{
+    color: white;
+    font-size: 8pt;
+}
+.MainMenuContainer .MainMenuBodyLateralMenu .WelcomeMessage .message{
+    margin: auto;
+}
+.MainMenuContainer .MainMenuBodyLateralMenu h2{
+    font-size: 12pt;
+    color: white;
+}
+.MainMenuContainer .MainMenuBodyLateralMenu h3{
+    font-size: 8pt;
+    color: whitesmoke;
+}
+
+/**Menu superior*/
+.MainMenuContainer .MainMenuContent .MainMenuHeader{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255,255,255,0.45);
+    display: flex;
+    justify-content: space-between;
+}
+.MainMenuContainer .MainMenuHeader h1{
+    color: #676767;
+    font-size: 17pt;
+    margin: auto 10px;
+}
+/*Informacion de usuario*/
+.MainMenuContainer .MainMenuHeader .MainMenuHeaderUserInfo{
+    margin: auto 10px;
+    display: flex;
+}
+.MainMenuContainer .MainMenuHeader div span{
+    margin: auto;
+    font-size: 8pt;
+    color: #676767;
+}
+.MainMenuContainer .MainMenuHeader div div span{
+    margin: auto;
+    color: black;
+}
+.MainMenuContainer .MainMenuContent{
+    background-color: #f2f2f2;
+    height: 100vh;
+    width: 80%;
+}
+.MainMenuContainer .MainMenuContent .content{
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+
+}
+.MainMenuContainer .MainMenuContent .content p{
+    margin: 0 100px;
+    text-align: justify;
+}

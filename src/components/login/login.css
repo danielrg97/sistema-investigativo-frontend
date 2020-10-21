@@ -1,0 +1,74 @@
+.MainLoginContainer{
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    overflow: hidden;
+}
+.MainLoginContainer .title{
+    margin: 30vh 30px;
+}
+.MainLoginContainer .title h1{
+    color: white;
+}
+.MainLoginContainer .title pre{
+    color: white;
+}
+.loginContainer h1{
+    font-size: 17pt;
+    text-align: center;
+}
+.loginContainer{
+    background-color: whitesmoke;
+    margin: 100px 100px auto auto;
+    width: 300px;
+    align-content: center;
+    padding: 2em;
+    height: 300px;
+    border-radius: 10px;
+}
+.loginContainer .loginForm{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+.loginContainer .loginForm input{
+    border: none;
+    width: 100%;
+    height: 40px;
+    margin: 10px auto;
+    align-content: center;
+    text-align: center;
+    border-radius: 30px;
+}
+.loginContainer .loginButtonsCont input{
+    width: 100%;
+    height: 40px;
+    margin: 10px auto;
+    border: none;
+    background-color: #57b846;;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.loginContainer .loginButtonsCont .loginForgot {
+    background-color: inherit ;
+} 
+.loginContainer .loginButtonsCont input:hover{
+    background-color: #7777;
+}
+@media(max-width: 925px){
+    .loginContainer{
+        margin: 50px auto;
+    }
+    .MainLoginContainer{
+        display: inline;
+    }
+    .MainLoginContainer .title{
+        margin: 10px ;
+        text-align: center;
+    }
+}
