@@ -5,20 +5,20 @@ import LoginSchema from './schema';
 const FormLogin = ({handleSubmit}) => {
     return(
         <Form onSubmit={handleSubmit} className="loginForm" id="loginForm">
-        <Field type="email" name="email">
+        <Field type="text" name="userName">
           {({ field: { value, name, onBlur, onChange } }) => (
             <div>
               <input
-                type="email"
-                class="loginInput"
+                type="text"
+                className="loginInput"
                 name={name}
                 value={value}
                 onBlur={onBlur}
                 onChange={onChange}
-                placeholder={"Ingrese su correo institucional"}
+                placeholder={"Ingrese su usuario institucional"}
               />
               <br />
-              <ErrorMessage name="email" component={"div"}>
+              <ErrorMessage name="userName" component={"div"}>
                 {(message) => (
                   <div>
                     <div className="ui pointing red basic label">{message}</div>
@@ -33,7 +33,7 @@ const FormLogin = ({handleSubmit}) => {
             <div>
               <input
                 type="password"
-                class="loginInput"
+                className="loginInput"
                 name={name}
                 value={value}
                 onBlur={onBlur}
@@ -55,7 +55,7 @@ const FormLogin = ({handleSubmit}) => {
     );
 }
 export default withFormik({
-    mapPropsToValues: () => ({ email: "", password: "" }),
+    mapPropsToValues: () => ({ userName: "", password: "" }),
     validationSchema: LoginSchema,
     handleSubmit: (values, {props}) => {
         //Paso el submit por props para poder hacer el metodo en el componente padre y desacoplar el formulario

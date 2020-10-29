@@ -8,25 +8,29 @@ import SemilleroComponent from '../semilleros';
 import './main.css';
 
 const MainMenuComponent = () => {
+    const getInitials = () =>{ 
+        let username = localStorage.getItem("UserInSession").toUpperCase();
+        return username.charAt(0) + username.charAt(username.length - 1);
+    }
     return(
-        <div class="MainMenuContainer">
-                <div class="MainMenuBodyLateralMenu">
+        <div className="MainMenuContainer">
+                <div className="MainMenuBodyLateralMenu">
                     <h1>
                         Sistema Investigativo
                     </h1>
-                    <div class="WelcomeMessage">
-                        <div class="profileCircle">
-                            <label class="initials">DR</label>
+                    <div className="WelcomeMessage">
+                        <div className="profileCircle">
+                        <label className="initials">{getInitials()}</label>
                         </div>
-                        <div class="message">
+                        <div className="message">
                             <span><h2>Bienvenid@,</h2></span>
-                            <span><h3>[INFORMACION USER]</h3></span>
+                        <span><h3>{localStorage.getItem("UserInSession")}</h3></span>
                         </div>
                         <Divider/>
                     </div>
-                    <div class="mainOptions">  
+                    <div className="mainOptions">  
                         <Divider/>
-                        <ul class="list">
+                        <ul className="list">
                             <li style={{color:"white"}}><Icon name="home" color="white" style={{color:"white"}}/><Link to="/main">Mi Dashboard</Link></li>
                             <li style={{color:"white"}}><Icon name="compass" color="white" style={{color:"white"}}/><Link to="/main/lineas">Lineas de investgación</Link></li>
                             <li style={{color:"white"}}><Icon name="group" color="white" style={{color:"white"}}/><Link to="/main/semilleros">Semilleros</Link></li>
@@ -35,17 +39,17 @@ const MainMenuComponent = () => {
                         <Divider/>
                     </div>
                 </div>
-                <div class="MainMenuContent">
-                    <div class="MainMenuHeader">
+                <div className="MainMenuContent">
+                    <div className="MainMenuHeader">
                         <h1>Inicio</h1>
-                        <div class="MainMenuHeaderUserInfo">
-                            <div class="profileCircle2">
-                                <label class="initials2">DR</label>
+                        <div className="MainMenuHeaderUserInfo">
+                            <div className="profileCircle2">
+                            <label className="initials2">{getInitials()}</label>
                             </div>
-                            <span>[INFORMACION USER]</span>
+                            <span>{localStorage.getItem("UserInSession")}</span>
                         </div>   
                     </div>
-                    <div class="content">
+                    <div className="content">
                         <Route exact path ="/main" component={MyDashboardComponent}/>
                         <Route path = "/main/lineas" component={InvestigativeLinesComponent}/>
                         <Route path = "/main/semilleros" component={SemilleroComponent}/>

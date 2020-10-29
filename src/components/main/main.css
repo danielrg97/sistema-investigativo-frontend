@@ -12,10 +12,13 @@ a{
     color:lightgray !important; 
 }
 a:hover { 
-    color: white!important; 
+    color: white !important; 
 }
 i{
     margin: 10px !important;
+}
+i:hover{
+    cursor: pointer;
 }
 /*Menu lateral*/
 .MainMenuContainer .MainMenuBodyLateralMenu{
@@ -39,7 +42,7 @@ i{
 }
 .mainOptions ul{
     list-style-type: none;
-    left: -28px;
+    margin-left: -41px;
 }
 .mainOptions ul li{
     padding: 1em 0.5em;
@@ -118,7 +121,7 @@ i{
 .MainMenuContainer .MainMenuContent{
     background-color: #f2f2f2;
     height: 100vh;
-    width: 80%;
+    width: 85%;
 }
 .MainMenuContainer .MainMenuContent .content{
     height: calc(100% - 70px);
