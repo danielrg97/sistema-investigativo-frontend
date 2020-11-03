@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route } from 'react-router-dom'; 
 import { ToastContainer } from 'react-toastify';
 import store from './store';
 import LoginComponent from './components/login';
@@ -13,9 +13,6 @@ function App() {
     <Provider store={store}>
         <Router>
           <div>
-            <Route path="/">
-              <Redirect to="/main"/>
-            </Route>
             <Route path="/login" component={LoginComponent}/>
             <Route path="/main" component={MainMenuComponent}/>
             <ToastContainer

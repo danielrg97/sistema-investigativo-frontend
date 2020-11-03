@@ -17,7 +17,7 @@ const LoginIndex = ({history}) =>{
     const validate = _ => {
         if(error !== false && typeof error !== 'undefined'){
             toast.warn(error.response.data.message, toastProperties);
-        }else if(error === false && localStorage.getItem("Authorization")){
+        }else if(error === false && localStorage.getItem("Authorization") !== null){
             history.push("/main");
         }
     }

@@ -9,7 +9,7 @@ import './main.css';
 
 const MainMenuComponent = () => {
     const getInitials = () =>{ 
-        let username = localStorage.getItem("UserInSession").toUpperCase();
+        let username = localStorage.getItem("UserInSession") ? localStorage.getItem("UserInSession").toUpperCase() : "NA";
         return username.charAt(0) + username.charAt(username.length - 1);
     }
     return(

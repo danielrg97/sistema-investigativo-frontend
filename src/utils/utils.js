@@ -4,7 +4,7 @@
  */
 export const validateIfHasToken = history => {
     if(!localStorage.getItem("Authorization") && !localStorage.getItem("UserInSession")){
-        history.push("/");
+        history.push("/login");
     }
 }
 
